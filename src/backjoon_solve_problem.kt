@@ -96,14 +96,13 @@ fun main(){
         val br = System.`in`.bufferedReader()
         val (A, B) = br.readLine().split(' ').map{ it.toInt()}
 
-        if(A>B){
+        if (A > B) {
                 print(">")
         }
-        else if(A<B){
+        else if (A < B) {
                 print("<")
         }
-
-        else if(A==B){
+        else if (A == B) {
                 print("==")
         }
         */
@@ -112,21 +111,20 @@ fun main(){
         val br = System.`in`.bufferedReader()
         val A = br.readLine().toInt()
 
-
         //if,else if 방식
-        if(A >= 90 && A <= 100){
+        if (A >= 90 && A <= 100) {
             print("A")
         }
-        else if(A >= 80 && A <= 89){
+        else if (A >= 80 && A <= 89) {
             print("B")
         }
-        else if(A >= 70 && A <= 79){
+        else if (A >= 70 && A <= 79) {
             print("C")
         }
-        else if(A >= 60 && A <= 69){
+        else if (A >= 60 && A <= 69) {
             print("D")
         }
-        else if(A <= 59){
+        else if (A <= 59) {
             print("F")
         }
 
@@ -145,10 +143,9 @@ fun main(){
         val br = System.`in`.bufferedReader()
         val A = br.readLine().toInt()
 
-        if((A%4 == 0 && A%100 !=0) || A%400 == 0){
+        if ((A%4 == 0 && A%100 !=0) || A%400 == 0) {
                 print("1")
-        }
-        else{
+        } else{
                 print("0")
         }
         */
@@ -159,16 +156,16 @@ fun main(){
         val A = br.readLine().toInt()
         val B = br.readLine().toInt()
 
-        if(A >0 && B>0){
+        if (A > 0 && B > 0) {
                 print("1")
         }
-        else if(A > 0 && B < 0){
+        else if (A > 0 && B < 0) {
                 print("4")
         }
-        else if(A < 0 && B > 0){
+        else if (A < 0 && B > 0) {
                 print("2")
         }
-        else if(A < 0 && B < 0){
+        else if (A < 0 && B < 0) {
                 print("3")
         }
         */
@@ -177,17 +174,15 @@ fun main(){
         val br = System.`in`.bufferedReader()
         var (A, B) = br.readLine()!!.split(' ').map{ it.toInt()}
 
-        if((B - 45) < 0){
-                if((A-1) < 0){
+        if ((B - 45) < 0) {
+                if((A - 1) < 0){
                         A = 23
                         B = 60 + (B-45)
-                }
-                else {
+                } else {
                         A = A - 1
                         B = 60 + (B-45)
                 }
-        }
-        else{
+        } else{
                 B = B - 45
         }
 
@@ -208,12 +203,34 @@ fun main(){
         // val (A, B) = br.readLine()!!.split('\n').map{ it.toInt()}
 
         val A = br.readLine().toInt()
-        for (i in 1..A){
+        for (i in 1..A) {
                 val (B, C) = br.readLine()!!.split(' ').map{ it.toInt()}
                 println(B+C)
         }
         */
 
+        /* 8393번
+        val br = System.`in`.bufferedReader()
+        val n = br.readLine().toInt()
+        var sum : Int = 0
 
+        for (i in 1..n){
+            sum = sum+i
+        }
+
+        print(sum)
+        */
+
+        /* 15552번
+        val br = BufferedReader(InputStreamReader(System.`in`))
+        val bw = BufferedWriter(OutputStreamWriter(System.out))
+        repeat(br.readLine().toInt()) {
+                val token = StringTokenizer(br.readLine())
+                val sum = (token.nextToken().toInt() + token.nextToken().toInt()).toString()
+                bw.write(sum + "\n")
+        }
+        bw.flush()
+        bw.close()
+        */
 }
 
