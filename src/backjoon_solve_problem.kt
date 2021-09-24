@@ -232,5 +232,84 @@ fun main(){
         bw.flush()
         bw.close()
         */
+
+        /*
+        val br = System.`in`.bufferedReader()
+        val n = br.readLine().toInt()
+
+        for (i in 1..n) {
+            println(i)
+        }
+        */
+    /* 2741번
+    val br = BufferedReader(InputStreamReader(System.`in`))
+    val bw = BufferedWriter(OutputStreamWriter(System.out))
+    val n = br.readLine().toInt()
+
+    for (i in 1..n) {
+        bw.write(i.toString() + "\n")
+    }
+    bw.flush()
+    bw.close()
+    */
+
+    /* 2742번
+    val br = BufferedReader(InputStreamReader(System.`in`))
+    val bw = BufferedWriter(OutputStreamWriter(System.out))
+    val n = br.readLine().toInt()
+
+    for (i in 0..n-1) {
+        bw.write((n-i).toString() + "\n")
+    }
+    bw.flush()
+    bw.close()
+    */
+
+    /* 11021번
+    val br = BufferedReader(InputStreamReader(System.`in`))
+    val bw = BufferedWriter(OutputStreamWriter(System.out))
+
+    val n = br.readLine().toInt()
+
+    for (i in 1..n) {
+        val token = StringTokenizer(br.readLine())
+        val sum = (token.nextToken().toInt() + token.nextToken().toInt()).toString()
+        bw.write("Case #${i}: " + sum + "\n")
+    }
+    bw.flush()
+    bw.close()
+    */
+
+    /* 11022번
+    //val br = BufferedReader(InputStreamReader(System.`in`))
+    //val bw = BufferedWriter(OutputStreamWriter(System.out))
+    val br = System.`in`.bufferedReader()
+    val bw = System.`out`.bufferedWriter()
+
+    val n = br.readLine().toInt()
+
+    for (i in 1..n) {
+        val token = StringTokenizer(br.readLine())
+        val A = token.nextToken().toInt()
+        val B = token.nextToken().toInt()
+        val sum = (A + B).toString()
+        bw.write("Case #${i}: " + "${A} +" + " ${B} = " + sum + "\n")
+    }
+    bw.flush()
+    bw.close()
+    */
+
+    /* 2438번
+    val br = System.`in`.bufferedReader()
+    val bw = System.`out`.bufferedWriter()
+    val n = br.readLine().toInt()
+
+    for (i in 1..n) {
+        for(j in 1..i){
+            print("*")
+        }
+        print("\n")
+    }
+    */
 }
 
