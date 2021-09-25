@@ -397,16 +397,65 @@ fun main(){
     var N2 = N
     var NewN : String
 
-    while(true){
+    while (true) {
         sum = (N2/10) + (N2%10)
         NewN = "${N2%10}"+"${sum%10}"
         count++
         N2 = NewN.toInt()
-        if(N2 == N){
+        if (N2 == N) {
             break
         }
     }
     print(count)
     */
+
+    /* 10818번
+    val br = System.`in`.bufferedReader()
+    val bw = System.`out`.bufferedWriter()
+
+    val N = br.readLine().toInt()
+
+    val A = br.readLine().split(' ').map{it.toInt()}.toTypedArray().toList()
+    print("${A.minOrNull()} ${A.maxOrNull()}")
+    */
+
+    /* 10818번(2)
+    val br = System.`in`.bufferedReader()
+    val bw = System.`out`.bufferedWriter()
+
+    val N = br.readLine().toInt()
+
+    val list = ArrayList<Int>(N)
+
+    br.readLine().split(' ').map{list.add(it.toInt())}
+
+    print("${list.minOrNull()} ${list.maxOrNull()}")
+    */
+
+    /* 2562번
+    val br = System.`in`.bufferedReader()
+    val bw = System.`out`.bufferedWriter()
+    val list = ArrayList<Int>(9)
+
+    for (i in 0 until 9) {
+        val A = br.readLine().toInt()
+        list.add(A)
+    }
+    println("${list.maxOrNull()}")
+    println("${list.indexOf(list.maxOrNull())+1}")
+    */
+
+    val br = System.`in`.bufferedReader()
+    val bw = System.`out`.bufferedWriter()
+
+    val A = br.readLine().toInt()
+    val B = br.readLine().toInt()
+    val C = br.readLine().toInt()
+    val Num = (A*B*C).toString()
+    val list = ArrayList<Int>(9)
+
+    for (i in Num) {
+
+    }
 }
 
