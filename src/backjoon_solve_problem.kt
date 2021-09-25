@@ -311,5 +311,102 @@ fun main(){
         print("\n")
     }
     */
+
+    /* 2439번
+    val br = System.`in`.bufferedReader()
+    val bw = System.`out`.bufferedWriter()
+    val n = br.readLine().toInt()
+
+    for (i in 1..n) {
+        for (j in n downTo 1) {
+            if (i >= j) {
+                print("*")
+            } else {
+                print(" ")
+            }
+        }
+        print("\n")
+    }
+    */
+
+    /* 10871번
+    val br = System.`in`.bufferedReader()
+    val bw = System.`out`.bufferedWriter()
+
+    var token = StringTokenizer(br.readLine())
+    val N = token.nextToken().toInt()
+    val X = token.nextToken().toInt()
+
+    token = StringTokenizer(br.readLine())
+
+    for (i in 1..N) {
+        val num: Int = token.nextToken().toInt()
+        if (num < X) {
+            bw.write("${num} ")
+        }
+    }
+
+    bw.flush()
+    bw.close()
+    */
+
+    /* 10952번
+    val br = System.`in`.bufferedReader()
+    val bw = System.`out`.bufferedWriter()
+
+    while(true) {
+        val token = StringTokenizer(br.readLine())
+        val A = token.nextToken().toInt()
+        val B = token.nextToken().toInt()
+        val sum = (A + B).toString()
+
+        if (A ==0 && B == 0) {
+            break
+        } else{
+            bw.write(sum + "\n")
+        }
+    }
+    bw.flush()
+    bw.close()
+    */
+
+    /* 10951번
+    val br = System.`in`.bufferedReader()
+    val bw = System.`out`.bufferedWriter()
+    var line: String?
+
+    while (br.readLine().apply{ line = this} != null) {
+        val token = StringTokenizer(line)
+        val A = token.nextToken().toInt()
+        val B = token.nextToken().toInt()
+
+        val sum = (A + B).toString()
+        bw.write(sum + "\n")
+    }
+
+    bw.flush()
+    bw.close()
+    */
+
+    /* 1110번
+    val br = System.`in`.bufferedReader()
+    val bw = System.`out`.bufferedWriter()
+    var count = 0
+    var sum = 0
+    var N = br.readLine().toInt()
+    var N2 = N
+    var NewN : String
+
+    while(true){
+        sum = (N2/10) + (N2%10)
+        NewN = "${N2%10}"+"${sum%10}"
+        count++
+        N2 = NewN.toInt()
+        if(N2 == N){
+            break
+        }
+    }
+    print(count)
+    */
 }
 
