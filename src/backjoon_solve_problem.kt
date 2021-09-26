@@ -445,6 +445,7 @@ fun main(){
     println("${list.indexOf(list.maxOrNull())+1}")
     */
 
+    /* 2577번
     val br = System.`in`.bufferedReader()
     val bw = System.`out`.bufferedWriter()
 
@@ -452,10 +453,81 @@ fun main(){
     val B = br.readLine().toInt()
     val C = br.readLine().toInt()
     val Num = (A*B*C).toString()
-    val list = ArrayList<Int>(9)
+    val list = mutableListOf<Int>(0,0,0,0,0,0,0,0,0,0)
 
     for (i in Num) {
-
+        //print(i)
+        list[i.digitToInt()] = list[i.digitToInt()] + 1
     }
+
+    list.forEach {
+        println(it)
+    }
+    */
+
+    /* 1065번
+    val br = System.`in`.bufferedReader()
+    val bw = System.`out`.bufferedWriter()
+
+    val s = br.readLine()!!.toInt()
+    var answer = 0
+    for (i in s downTo 1) {
+        val t = i.toString()
+        var isAnswer = true
+        if (t.length == 1) {
+            answer++
+        } else {
+            val tmp = t[0].toInt() - t[1].toInt()
+            for (j in 0 until t.lastIndex) {
+                if (tmp!=t[j].toString().toInt() - t[j+1].toString().toInt()) {
+                    isAnswer= false
+                }
+            }
+            if (isAnswer) {
+                answer++
+            }
+        }
+    }
+    println(answer)
+    */
+
+    /* 4344번
+    val br = System.`in`.bufferedReader()
+    val bw = System.`out`.bufferedWriter()
+
+    val arr = IntArray(1_001)
+    var N = br.readLine().toInt()
+
+    var sum: Double
+    var avg: Double
+    var count: Double
+    var result: Double
+
+    for (i in 0 until N) {
+        sum = 0.0
+        avg = 0.0
+        count = 0.0
+        val stringToken = StringTokenizer(br.readLine())
+
+        var i:Int = 0
+        while(stringToken.hasMoreTokens()) {
+            arr[i] = stringToken.nextToken().toInt()
+            i++
+        }
+
+        for (j in 1..arr[0]){
+            sum += arr[j]
+            avg = sum / arr[0]
+        }
+
+        for (j in 1..arr[0]) {
+            if (arr[j] > avg) {
+                count++
+            }
+        }
+        result = count / arr[0] * 100
+        println("${String.format("%.3f", result)}%")
+    }
+    */
 }
 
