@@ -2,24 +2,24 @@ import java.io.*
 import java.util.*
 
 fun main(){
-        /* 2557번
+        /* 2557번 */
         print("Hello World!")
-        */
 
-        /* 10718번
+
+        /* 10718번 */
         println("강한친구 대한육군")
         print("강한친구 대한육군")
-        */
 
-        /* 10171번
+
+        /* 10171번 */
         println(
                 """\    /\
                  )  ( ')
                 (  /  )
                  \(__)|""")
-        */
 
-        /* 10172번
+
+        /* 10172번 */
         println(
                 """|\_/|
                 |q p|   /}
@@ -27,40 +27,40 @@ fun main(){
                 |"^"`    |
                 ||_/=\\__|
                 """)
-        */
 
-        /* 1000번
+
+        /* 1000번 */
         val br = System.`in`.bufferedReader()
         val (A, B) = br.readLine().split(' ').map{ it.toInt()}
 
         print(A+B)
-        */
 
-        /* 1001번
+
+        /* 1001번 */
 
         val br = System.`in`.bufferedReader()
         val (A, B) = br.readLine().split(' ').map{ it.toInt()}
 
         print(A-B)
-        */
 
-        /* 10998번
+
+        /* 10998번 */
 
         val br = System.`in`.bufferedReader()
         val (A, B) = br.readLine().split(' ').map{ it.toInt()}
 
         print(A*B)
-        */
 
-        /* 1008번
+
+        /* 1008번 */
 
         val br = System.`in`.bufferedReader()
         val (A, B) = br.readLine().split(' ').map{ it.toDouble()}
 
         print(A/B)
-        */
 
-        /* 10869번
+
+        /* 10869번 */
         val br = System.`in`.bufferedReader()
         val (A, B) = br.readLine().split(' ').map{ it.toInt()}
 
@@ -69,9 +69,9 @@ fun main(){
         println(A*B)
         println(A/B)
         println(A%B)
-        */
 
-        /* 10430번
+
+        /* 10430번 */
         val br = System.`in`.bufferedReader()
         val (A, B, C) = br.readLine().split(' ').map{ it.toInt()}
 
@@ -79,9 +79,9 @@ fun main(){
         println(((A%C) + (B%C))%C)
         println((A*B)%C)
         print(((A%C)*(B%C))%C)
-        */
 
-        /* 2588번
+
+        /* 2588번 */
         val br = System.`in`.bufferedReader()
         val A = br.readLine().toInt()
         val B = br.readLine().toInt()
@@ -90,9 +90,9 @@ fun main(){
         println(A*((B%100)/10))
         println(A*(B/100))
         println(A*B)
-        */
 
-        /* 1330번
+
+        /* 1330번 */
         val br = System.`in`.bufferedReader()
         val (A, B) = br.readLine().split(' ').map{ it.toInt()}
 
@@ -105,9 +105,9 @@ fun main(){
         else if (A == B) {
                 print("==")
         }
-        */
 
-        /* 9498번
+
+        /* 9498번 */
         val br = System.`in`.bufferedReader()
         val A = br.readLine().toInt()
 
@@ -137,9 +137,9 @@ fun main(){
                 in 60..69 -> { println("D") }
                 else -> { println("F") }
         }
-        */
 
-        /* 2753번
+
+        /* 2753번 */
         val br = System.`in`.bufferedReader()
         val A = br.readLine().toInt()
 
@@ -148,9 +148,9 @@ fun main(){
         } else{
                 print("0")
         }
-        */
 
-        /* 14681번
+
+        /* 14681번 */
         val br = System.`in`.bufferedReader()
 
         val A = br.readLine().toInt()
@@ -168,9 +168,9 @@ fun main(){
         else if (A < 0 && B < 0) {
                 print("3")
         }
-        */
 
-        /* 2884번
+
+        /* 2884번 */
         val br = System.`in`.bufferedReader()
         var (A, B) = br.readLine()!!.split(' ').map{ it.toInt()}
 
@@ -187,18 +187,18 @@ fun main(){
         }
 
         print("${A} ${B}")
-        */
 
-        /* 2739번
+
+        /* 2739번 */
         val br = System.`in`.bufferedReader()
         val (A) = br.readLine().split(' ').map{ it.toInt()}
 
         for (i in 1..9) {
                 println("${A} * ${i} = ${A*i}")
         }
-        */
 
-        /* 10950번
+
+        /* 10950번 */
         val br = System.`in`.bufferedReader()
         // val (A, B) = br.readLine()!!.split('\n').map{ it.toInt()}
 
@@ -207,9 +207,9 @@ fun main(){
                 val (B, C) = br.readLine()!!.split(' ').map{ it.toInt()}
                 println(B+C)
         }
-        */
 
-        /* 8393번
+
+        /* 8393번 */
         val br = System.`in`.bufferedReader()
         val n = br.readLine().toInt()
         var sum : Int = 0
@@ -219,9 +219,9 @@ fun main(){
         }
 
         print(sum)
-        */
 
-        /* 15552번
+
+        /* 15552번 */
         val br = BufferedReader(InputStreamReader(System.`in`))
         val bw = BufferedWriter(OutputStreamWriter(System.out))
         repeat(br.readLine().toInt()) {
@@ -231,17 +231,17 @@ fun main(){
         }
         bw.flush()
         bw.close()
-        */
 
-        /*
+
+        /* */
         val br = System.`in`.bufferedReader()
         val n = br.readLine().toInt()
 
         for (i in 1..n) {
             println(i)
         }
-        */
-    /* 2741번
+
+    /* 2741번 */
     val br = BufferedReader(InputStreamReader(System.`in`))
     val bw = BufferedWriter(OutputStreamWriter(System.out))
     val n = br.readLine().toInt()
@@ -251,9 +251,9 @@ fun main(){
     }
     bw.flush()
     bw.close()
-    */
 
-    /* 2742번
+
+    /* 2742번 */
     val br = BufferedReader(InputStreamReader(System.`in`))
     val bw = BufferedWriter(OutputStreamWriter(System.out))
     val n = br.readLine().toInt()
@@ -263,9 +263,9 @@ fun main(){
     }
     bw.flush()
     bw.close()
-    */
 
-    /* 11021번
+
+    /* 11021번 */
     val br = BufferedReader(InputStreamReader(System.`in`))
     val bw = BufferedWriter(OutputStreamWriter(System.out))
 
@@ -278,9 +278,9 @@ fun main(){
     }
     bw.flush()
     bw.close()
-    */
 
-    /* 11022번
+
+    /* 11022번 */
     //val br = BufferedReader(InputStreamReader(System.`in`))
     //val bw = BufferedWriter(OutputStreamWriter(System.out))
     val br = System.`in`.bufferedReader()
@@ -297,9 +297,9 @@ fun main(){
     }
     bw.flush()
     bw.close()
-    */
 
-    /* 2438번
+
+    /* 2438번 */
     val br = System.`in`.bufferedReader()
     val bw = System.`out`.bufferedWriter()
     val n = br.readLine().toInt()
@@ -310,9 +310,9 @@ fun main(){
         }
         print("\n")
     }
-    */
 
-    /* 2439번
+
+    /* 2439번 */
     val br = System.`in`.bufferedReader()
     val bw = System.`out`.bufferedWriter()
     val n = br.readLine().toInt()
@@ -327,9 +327,9 @@ fun main(){
         }
         print("\n")
     }
-    */
 
-    /* 10871번
+
+    /* 10871번 */
     val br = System.`in`.bufferedReader()
     val bw = System.`out`.bufferedWriter()
 
@@ -348,9 +348,9 @@ fun main(){
 
     bw.flush()
     bw.close()
-    */
 
-    /* 10952번
+
+    /* 10952번 */
     val br = System.`in`.bufferedReader()
     val bw = System.`out`.bufferedWriter()
 
@@ -368,9 +368,9 @@ fun main(){
     }
     bw.flush()
     bw.close()
-    */
 
-    /* 10951번
+
+    /* 10951번 */
     val br = System.`in`.bufferedReader()
     val bw = System.`out`.bufferedWriter()
     var line: String?
@@ -386,9 +386,9 @@ fun main(){
 
     bw.flush()
     bw.close()
-    */
 
-    /* 1110번
+
+    /* 1110번 */
     val br = System.`in`.bufferedReader()
     val bw = System.`out`.bufferedWriter()
     var count = 0
@@ -407,9 +407,9 @@ fun main(){
         }
     }
     print(count)
-    */
 
-    /* 10818번
+
+    /* 10818번 */
     val br = System.`in`.bufferedReader()
     val bw = System.`out`.bufferedWriter()
 
@@ -417,9 +417,9 @@ fun main(){
 
     val A = br.readLine().split(' ').map{it.toInt()}.toTypedArray().toList()
     print("${A.minOrNull()} ${A.maxOrNull()}")
-    */
 
-    /* 10818번(2)
+
+    /* 10818번(2) */
     val br = System.`in`.bufferedReader()
     val bw = System.`out`.bufferedWriter()
 
@@ -430,9 +430,9 @@ fun main(){
     br.readLine().split(' ').map{list.add(it.toInt())}
 
     print("${list.minOrNull()} ${list.maxOrNull()}")
-    */
 
-    /* 2562번
+
+    /* 2562번 */
     val br = System.`in`.bufferedReader()
     val bw = System.`out`.bufferedWriter()
     val list = ArrayList<Int>(9)
@@ -443,9 +443,9 @@ fun main(){
     }
     println("${list.maxOrNull()}")
     println("${list.indexOf(list.maxOrNull())+1}")
-    */
 
-    /* 2577번
+
+    /* 2577번 */
     val br = System.`in`.bufferedReader()
     val bw = System.`out`.bufferedWriter()
 
@@ -463,9 +463,9 @@ fun main(){
     list.forEach {
         println(it)
     }
-    */
 
-    /* 1065번
+
+    /* 1065번 */
     val br = System.`in`.bufferedReader()
     val bw = System.`out`.bufferedWriter()
 
@@ -489,9 +489,9 @@ fun main(){
         }
     }
     println(answer)
-    */
 
-    /* 4344번
+
+    /* 4344번 */
     val br = System.`in`.bufferedReader()
     val bw = System.`out`.bufferedWriter()
 
@@ -528,6 +528,5 @@ fun main(){
         result = count / arr[0] * 100
         println("${String.format("%.3f", result)}%")
     }
-    */
 }
 
