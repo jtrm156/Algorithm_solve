@@ -1,3 +1,4 @@
+/*
 import java.io.*
 import java.util.*
 
@@ -529,4 +530,4 @@ fun main(){
         println("${String.format("%.3f", result)}%")
     }
 }
-
+*/
