@@ -3,10 +3,10 @@ package backjoon_11723
 fun main() {
     val br = System.`in`.bufferedReader()
     val N = br.readLine().toInt()
-    val stack = arrayListOf<Int>()
 
     for(i in 0 until N){
         val tmp = br.readLine().split(" ")
+        val sb : StringBuilder = StringBuilder
         var s = 0
 
         when (tmp[0]) {
@@ -17,13 +17,13 @@ fun main() {
                 s = s and (1 shl tmp[1].toInt())
             }
             "check" -> {
-                s =
+                sb.append(1 shl 20)
             }
             "toggle" -> {
-                s = s xor (1 << tmp[1].toInt())
+                s = s xor (1 shl tmp[1].toInt())
             }
             "all" -> {
-                s = (1 shl 21) -1
+                s.inv()
             }
             "empty" -> {
                 s = 0
