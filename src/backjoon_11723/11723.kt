@@ -6,7 +6,7 @@ fun main() {
 
     for(i in 0 until N){
         val tmp = br.readLine().split(" ")
-        val sb : StringBuilder = StringBuilder
+        val sb = StringBuilder()
         var s = 0
 
         when (tmp[0]) {
@@ -17,7 +17,11 @@ fun main() {
                 s = s and (1 shl tmp[1].toInt())
             }
             "check" -> {
-                sb.append(1 shl 20)
+                if ((s or (1 shl tmp[1].toInt())) > 0) {
+                    sb.append("1\n")
+                } else {
+                   sb.append("0\n")
+                }
             }
             "toggle" -> {
                 s = s xor (1 shl tmp[1].toInt())
@@ -29,5 +33,6 @@ fun main() {
                 s = 0
             }
         }
+        print(s)
     }
 }
