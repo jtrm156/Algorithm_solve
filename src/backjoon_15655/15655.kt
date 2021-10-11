@@ -13,3 +13,9 @@ fun main() {
 
     print(list)
 }
+
+fun bt(depth: Int, start: Int) {
+    if(depth == M) {
+
+    }
+}
