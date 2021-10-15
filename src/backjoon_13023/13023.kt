@@ -1,62 +1,81 @@
 package backjoon_13023
+import java.io.BufferedReader
+import java.io.BufferedWriter
+import java.io.InputStreamReader
+import java.io.OutputStreamWriter
 
-public class Main {
-    private static int m;
-    private static ArrayList<Integer>[] list;
-    private static int ans = 0;
-    private static boolean[] v;
+import java.util.*
+import kotlin.collections.ArrayList
 
-    public static void main(String[] args) throws Exception {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        StringTokenizer st = new StringTokenizer(br.readLine());
+var br = BufferedReader(InputStreamReader(System.`in`))
+var bw = BufferedWriter(OutputStreamWriter(System.out))
 
-        int N = Integer.parseInt(st.nextToken());
-        int M = Integer.parseInt(st.nextToken());
-        m = M;
+var N = 0//정점 수
+var M = 0//간선 수
+var graph = ArrayList<ArrayList<Int>>()
+lateinit var visited : BooleanArray
+var result = 0
 
-        //DFS를 위한 인접리스트 구현하기
-        list = new ArrayList[N];
-        v = new boolean[N];
-        for(int i = 0; i < N; i++) {
-            list[i] = new ArrayList<Integer>();
-        }
+fun solution() {
 
-        for(int i = 0; i < M; i++) {
-            st = new StringTokenizer(br.readLine());
-            int n1 = Integer.parseInt(st.nextToken());
-            int n2 = Integer.parseInt(st.nextToken());
-            list[n1].add(n2);
-            list[n2].add(n1);
-        }
+    var strtok = StringTokenizer(br.readLine())
+    N = strtok.nextToken().toInt()
+    M = strtok.nextToken().toInt()
 
-        //N-1까지의 모든 정점에서 DFS를 통해 확인
-        for(int i = 0; i < N; i++) {
-            if(ans == 0)
-                dfs(i, 1);
-        }
 
-        bw.write(Integer.toString(ans));
-        bw.flush();
-        bw.close();
-        br.close();
+    visited = BooleanArray(N)
+
+    for(i in 0 until N)
+        graph.add(ArrayList())
+
+    for(i in 0 until M)
+    {
+        strtok = StringTokenizer(br.readLine())
+        var from = strtok.nextToken().toInt()
+        var to = strtok.nextToken().toInt()
+
+        graph.get(from).add(to)
+        graph.get(to).add(from)
     }
 
-    public static void dfs(int start, int depth) {
-        //System.out.println(start + " " + depth); //방문 정점과 깊이를 확인해보고 싶을 때 사용
-        if(depth == 5) {
-            ans = 1;
-            return;
+    for(i in 0 until N)
+    {
+        if(!visited[i])
+        {
+            visited[i] = true
+            dfs(i, 0, visited)
+            visited[i] = false
         }
-
-        v[start] = true;
-        for(int i : list[start]) {
-            int next = i;
-            if(!v[next]) {
-                dfs(next, depth+1);
-            }
-        }
-        v[start] = false;
-
+        if(result == 1)
+            break
     }
+
+    bw.write(result.toString())
+}
+
+fun dfs(now : Int, depth : Int, visited : BooleanArray)
+{
+    if(depth == 4)
+    {
+        result = 1
+        return
+    }
+
+    for(i in 0 until graph[now].size)
+    {
+        var next = graph[now][i]
+
+        if(!visited[next])
+        {
+            visited[next] = true
+            dfs(next, depth + 1, visited)
+            visited[next] = false
+        }
+    }
+}
+
+fun main() {
+    solution()
+    br.close()
+    bw.close()
 }
