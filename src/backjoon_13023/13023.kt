@@ -7,8 +7,8 @@ import java.io.OutputStreamWriter
 import java.util.*
 import kotlin.collections.ArrayList
 
-var br = BufferedReader(InputStreamReader(System.`in`))
-var bw = BufferedWriter(OutputStreamWriter(System.out))
+val br = System.`in`.bufferedReader()
+val bw = System.`out`.bufferedWriter()
 
 var N = 0//정점 수
 var M = 0//간선 수

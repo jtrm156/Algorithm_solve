@@ -2,8 +2,8 @@ package backjoon_15649
 import java.io.*
 import java.util.*
 
-val br = BufferedReader(InputStreamReader(System.`in`))
-val bw = BufferedWriter(OutputStreamWriter(System.out))
+val br = System.`in`.bufferedReader()
+val bw = System.`out`.bufferedWriter()
 
 var n = 0
 var m = 0
