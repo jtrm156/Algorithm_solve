@@ -17,11 +17,9 @@ lateinit var visited : BooleanArray
 var result = 0
 
 fun solution() {
-
     var strtok = StringTokenizer(br.readLine())
     N = strtok.nextToken().toInt()
     M = strtok.nextToken().toInt()
-
 
     visited = BooleanArray(N)
 

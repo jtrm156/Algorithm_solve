@@ -29,8 +29,7 @@ fun dfs(sequence: String) {
     }
 }
 
-fun main() {
-
+fun main() {0
     val token = StringTokenizer(br.readLine(), " ")
     n = token.nextToken().toInt()
     m = token.nextToken().toInt()
