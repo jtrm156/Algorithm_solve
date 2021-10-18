@@ -12,6 +12,7 @@ fun main() {
 
     map = Array(size) { IntArray(size) }
     isVisited = BooleanArray(size)
+
     for (i in 0 until size) {
         var strtok = StringTokenizer(br.readLine())
 
@@ -19,6 +20,7 @@ fun main() {
             map[i][j] = strtok.nextToken().toInt()
         }
     }
+
     dfs(0, 0)
     println(min)
 }
@@ -39,6 +41,7 @@ private fun dfs(index: Int, depth: Int) {
         min = Math.min(min, Math.abs(startTeam - linkTeam))
         return
     }
+
     for (i in index until map.size) {
         if (!isVisited[i]) {
             isVisited[i] = true
@@ -46,5 +49,4 @@ private fun dfs(index: Int, depth: Int) {
             isVisited[i] = false
         }
     }
-
 }

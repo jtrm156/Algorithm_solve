@@ -10,13 +10,14 @@ import kotlin.collections.ArrayList
 val br = System.`in`.bufferedReader()
 val bw = System.`out`.bufferedWriter()
 
-var N = 0//정점 수
-var M = 0//간선 수
+var N = 0 //정점 수
+var M = 0 //간선 수
 var graph = ArrayList<ArrayList<Int>>()
 lateinit var visited : BooleanArray
 var result = 0
 
-fun solution() {
+fun solution()
+{
     var strtok = StringTokenizer(br.readLine())
     N = strtok.nextToken().toInt()
     M = strtok.nextToken().toInt()
