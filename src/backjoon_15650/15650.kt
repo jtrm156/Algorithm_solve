@@ -20,7 +20,7 @@ fun dfs(k : Int, start : Int) {
         if (!isUsed[i]) {
             arr[k] = i
             isUsed[i] = true
-            dfs(k+1, start+1)
+            dfs(k+1, i+1)
             isUsed[i] = false
         }
     }
