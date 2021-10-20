@@ -17,12 +17,8 @@ fun dfs(k : Int) {
     }
 
     for (i in 1 .. n) {
-        if (!isUsed[i]) {
             arr[k] = i
-            isUsed[i] = true
             dfs(k+1)
-            isUsed[i] = false
-        }
     }
 }
 
