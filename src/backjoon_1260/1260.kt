@@ -15,7 +15,7 @@ fun main(){
 
     //간선 수만큼 반복
     repeat(edge) {
-        val (v1, v2) = readLine().split(" ").map { it.toInt() }
+        val (v1, v2) = br.readLine().split(" ").map { it.toInt() }
         //연결된 노드들의 관계인 인덱스의 값을 1로 설정정
         graph[v1][v2] = 1
         graph[v2][v1] = 1
@@ -64,3 +64,5 @@ fun bfs(start: Int, graph: Array<IntArray>, visited: MutableList<Int>) {
                 visited.add(y) //방문체크
             }
         }
+    }
+}

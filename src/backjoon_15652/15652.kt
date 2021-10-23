@@ -20,9 +20,9 @@ fun dfs(k : Int) {
         return
     }
 
-    for (i in k .. n) {
+    for (i in 1 .. n) {
+        if (k != 0 && arr[k-1] > i) continue
         arr[k] = i
-        isUsed[i] = true
         dfs(k+1)
     }
 }
