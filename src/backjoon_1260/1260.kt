@@ -1,7 +1,5 @@
 package backjoon_1260
 
-import java.io.BufferedReader
-import java.io.InputStreamReader
 import java.util.*
 
 fun main(){

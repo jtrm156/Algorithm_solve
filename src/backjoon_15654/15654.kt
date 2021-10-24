@@ -1,6 +1,5 @@
-package backjoon_15655
+package backjoon_15654
 
-import backjoon_15652.bw
 import java.util.*
 
 var n = 0
@@ -9,22 +8,20 @@ val arr = IntArray(10)
 val isUsed = BooleanArray(10, { false })
 val arr2 = mutableListOf<Int>()
 
-fun dfs(k : Int, start : Int) {
+fun dfs(k : Int) {
     if (k == m) {
         for (i in 0 until m) {
-            //print("${arr[i]} ")
-            bw.write("${arr[i]} ")
+            print("${arr[i]} ")
         }
-        //println()
-        bw.write("\n")
+        println()
         return
     }
 
-    for (i in start until arr2.size) {
+    for (i in 0 until arr2.size) {
         if (!isUsed[i]) {
             arr[k] = arr2[i]
             isUsed[i] = true
-            dfs(k+1, i+1)
+            dfs(k+1)
             isUsed[i] = false
         }
     }
@@ -39,7 +36,7 @@ fun main() {
 
     br.readLine().split(" ").map{ arr2.add(it.toInt()) }
     arr2.sort()
-    dfs(0,0)
+    dfs(0)
 
     bw.flush()
     bw.close()
