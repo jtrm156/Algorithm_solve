@@ -1,46 +1,40 @@
 package backjoon_1991
-class Node(val data: Char, val left: Node? = null, val right: Node? = null)
-class Tree(val root: Node){
-    //preorder 구현
-    fun preorder(){
-        fun preorderInternal(node:Node){
-            print("${node.data} ")
-            if(node.left!=null) preorderInternal(node.left)
-            if(node.right!=null) preorderInternal(node.right)
-        }
-        preorderInternal(root)
-        println()
-    }
-    //inorder 구현
-    fun inorder(){
-        fun inorderInternal(node:Node){
-            if(node.left!=null) inorderInternal(node.left)
-            print("${node.data} ")
-            if(node.right!=null) inorderInternal(node.right)
-        }
-        inorderInternal(root)
-        println()
-    }
-    //postorder구현
-    fun postorder(){
-        fun postorderInternal(node:Node){
-            if(node.left!=null) postorderInternal(node.left)
-            if(node.right!=null) postorderInternal(node.right)
-            print("${node.data} ")
-        }
-        postorderInternal(root)
-        println()
-    }
+import java.io.BufferedReader
+import java.io.InputStreamReader
+import java.util.*
+var N = 0
+var a = Array<Pair<Int,Int>>(26){Pair(0,0)}
+fun preorder(n:Int){
+    if(n==-1) return
+    print('A'+n)
+    preorder(a[n].first)
+    preorder(a[n].second)
 }
 
-fun main() {
-    val tree = Tree(Node('A',Node('B',Node('D'),Node('E')),Node('C',Node('F'),Node('G'))))
-    print("preorder result : ")
-    tree.preorder()
-    print("inorder result : ")
-    tree.inorder()
-    print("postorder result : ")
-    tree.postorder()
+fun inorder(n:Int){
+    if(n==-1) return
+    inorder(a[n].first)
+    print('A'+n)
+    inorder(a[n].second)
 }
 
+fun postorder(n:Int){
+    if(n==-1) return
+    postorder(a[n].first)
+    postorder(a[n].second)
+    print('A'+n)
+}
+fun main() = with(BufferedReader(InputStreamReader(System.`in`))){
+    N = readLine().toInt()
+    repeat(N){
+        val carr = readLine().split(' ').map{it[0]}
+        var left = if(carr[1]=='.') -1 else carr[1]-'A'
+        var right = if(carr[2]=='.') -1 else carr[2]-'A'
+        a[carr[0]-'A'] = Pair(left,right)
+    }
+    preorder(0)
+    println()
+    inorder(0)
+    println()
+    postorder(0)
 }
