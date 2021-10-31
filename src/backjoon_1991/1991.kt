@@ -4,6 +4,7 @@ import java.io.InputStreamReader
 import java.util.*
 var N = 0
 var a = Array<Pair<Int,Int>>(26){Pair(0,0)}
+
 fun preorder(n:Int){
     if(n==-1) return
     print('A'+n)
@@ -24,12 +25,14 @@ fun postorder(n:Int){
     postorder(a[n].second)
     print('A'+n)
 }
-fun main() = with(BufferedReader(InputStreamReader(System.`in`))){
-    N = readLine().toInt()
+
+fun main(){
+    val br = System.`in`.bufferedReader()
+    N = br.readLine().toInt()
     repeat(N){
-        val carr = readLine().split(' ').map{it[0]}
-        var left = if(carr[1]=='.') -1 else carr[1]-'A'
-        var right = if(carr[2]=='.') -1 else carr[2]-'A'
+        val carr = br.readLine().split(' ').map{it[0]}
+        var left = if(carr[1]=='.') -1 else carr[1] - 'A'
+        var right = if(carr[2]=='.') -1 else carr[2] - 'A'
         a[carr[0]-'A'] = Pair(left,right)
     }
     preorder(0)
