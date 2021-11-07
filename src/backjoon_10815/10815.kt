@@ -1,8 +1,5 @@
 package backjoon_10815
 
-import java.io.BufferedReader
-import java.io.InputStreamReader
-
 lateinit var myArr: List<Int>   //상근이가 가진 카드
 lateinit var cmpArr: List<Int>  //비교용 카드
 
@@ -29,11 +26,12 @@ fun binary(arr: List<Int>, search: Int): Int {
     return 0
 }
 
-fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
-    var have = readLine().toInt()
-    myArr = readLine().split(" ").map { it.toInt() }.sorted()  //정렬을 해야만 이진탐색이 가능하기에 정렬
-    var check = readLine().toInt()
-    cmpArr = readLine().split(" ").map { it.toInt() }
+fun main() {
+    val br = System.`in`.bufferedReader()
+    var N = br.readLine().toInt()
+    myArr = br.readLine().split(" ").map { it.toInt() }.sorted()  //정렬을 해야만 이진탐색이 가능하기에 정렬
+    var M = br.readLine().toInt()
+    cmpArr = br.readLine().split(" ").map { it.toInt() }
 
     for (i in cmpArr) {
         print("${binary(myArr, i)} ")
