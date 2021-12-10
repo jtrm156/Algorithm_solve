@@ -3,8 +3,9 @@ package backjoon_1157
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
-fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
-    val str = readLine()
+fun main() {
+    val br = System.`in`.bufferedReader()
+    val str = br.readLine()
     val map = mutableMapOf<Char, Int>()
 
     str.forEach {

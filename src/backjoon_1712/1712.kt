@@ -1,6 +1,6 @@
 package backjoon_1712
 
-fun main(args: Array<String>) = println(
+fun main() = println(
     readLine()!!
         .split(" ")
         .map { it.toInt() }
