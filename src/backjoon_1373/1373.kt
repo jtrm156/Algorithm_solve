@@ -2,8 +2,9 @@ package backjoon_1373
 
 import java.util.*
 
-fun main() = with(Scanner(System.`in`)){
-    var a = nextLine()
+fun main(){
+    val br = System.`in`.bufferedReader()
+    var a = br.readLine()
     var sum = 0
 
     if (a.length % 3 == 1) a = "00$a"
