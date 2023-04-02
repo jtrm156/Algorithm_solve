@@ -1,0 +1,7 @@
+package backjoon_2557;
+
+public class backJoon2557 {
+    public static void main(String[] args) {
+        System.out.print("Hello World!");
+    }
+}
