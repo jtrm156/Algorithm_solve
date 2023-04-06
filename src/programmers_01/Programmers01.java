@@ -37,10 +37,17 @@ public class Programmers01 {
             for (int j = 0; j < park[i].length(); j++) {
                 parking[i][j] = park[i].charAt(j);
 
-                if (park[i].charAt(j) == 'S') {
-                    sx = j;
+                if (park[i].contains("S")) {
                     sy = i;
+                    sx = park[i].indexOf("S");
                 }
+
+                /*
+                    if (park[i].charAt(j) == 'S') {
+                        sx = j;
+                        sy = i;
+                    }
+                */
             }
         }
 
