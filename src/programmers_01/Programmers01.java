@@ -1,13 +1,68 @@
 package programmers_01;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
 
 public class Programmers01 {
     public static void main(String[] args) {
-        String[] park = new String[]{"OSO","OOO","OXO","OOO"};
-        String[] routes = new String[]{"E 2","S 3","W 1"};
+        //String[] park = new String[]{"OSO","OOO","OXO","OOO"};
+        //String[] routes = new String[]{"E 2","S 3","W 1"};
 
-        System.out.print(Arrays.toString(solution2(park, routes)));
+        //System.out.print(Arrays.toString(solution2(park, routes)));
+
+        String[] players = new String[]{"mumu","soe","poe","kai","mine"};
+        String[] callings = new String[]{"kai","kai","mine","mine"};
+
+        System.out.print(Arrays.toString(solution(players,callings)));
+    }
+
+    /* 프로그래머스 1단계 달리기경주 */
+    public static String[] solution(String[] players, String[] callings) {
+        /* 시간초과
+        String[] answer = players;
+
+        String temp = "";
+
+        for (int i = 0; i < callings.length; i++) {
+            for (int j = 0; j < answer.length; j++) {
+                if (callings[i].equals(answer[j])) {
+                    // swap 로직
+                    temp = answer[j-1];
+                    answer[j-1] = answer[j];
+                    answer[j] = temp;
+
+                    break;
+                }
+            }
+        }
+        */
+
+        /* hashmap 사용 */
+        String[] answer = players.clone();
+
+        HashMap<String, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < players.length; i++){
+            map.put(players[i], i);
+        }
+
+        int tempN;
+        String tempS;
+
+        for (int i = 0; i < callings.length; i++){
+            tempN = map.get(callings[i]);
+
+            map.put(answer[tempN], map.get(answer[tempN]) - 1);
+            map.put(answer[tempN - 1], map.get(answer[tempN - 1]) + 1);
+
+            tempS = answer[tempN];
+            answer[tempN] = answer[tempN - 1];
+            answer[tempN - 1] = tempS;
+        }
+
+        return answer;
     }
 
     /* 프로그래머스 1단계 추억점수*/
