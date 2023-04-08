@@ -7,16 +7,33 @@ import java.util.List;
 
 public class Programmers01 {
     public static void main(String[] args) {
+        /* 프로그래머스 1단계 공원 산책 */
         //String[] park = new String[]{"OSO","OOO","OXO","OOO"};
         //String[] routes = new String[]{"E 2","S 3","W 1"};
-
         //System.out.print(Arrays.toString(solution2(park, routes)));
 
-        String[] players = new String[]{"mumu","soe","poe","kai","mine"};
-        String[] callings = new String[]{"kai","kai","mine","mine"};
+        /* 프로그래머스 1단계 달리기경주 */
+        //String[] players = new String[]{"mumu","soe","poe","kai","mine"};
+        //String[] callings = new String[]{"kai","kai","mine","mine"};
+        //System.out.print(Arrays.toString(solution(players,callings)));
 
-        System.out.print(Arrays.toString(solution(players,callings)));
+        /* 프로그래머스 1단계 카드뭉치 */
+        String[] cards1 = new String[]{"i","drink","water"};
+        String[] cards2 = new String[]{"want","to"};
+        String[] goal = new String[]{"i","want","to","drink","water"};
+
+        System.out.print(solution(cards1,cards2,goal));
     }
+
+    /* 프로그래머스 1단계 카드뭉치 */
+    public static String solution(String[] cards1, String[] cards2, String[] goal) {
+        String answer = "";
+
+
+
+        return answer;
+    }
+
 
     /* 프로그래머스 1단계 달리기경주 */
     public static String[] solution(String[] players, String[] callings) {
