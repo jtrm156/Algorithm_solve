@@ -45,8 +45,13 @@ public class backJoon12891 {
 
         //슬라이딩윈도우
         for (int i = p; i < n; i++) {
-            int j = i - p
+            int j = i - p;
+            Add(A[i]);
+            Remove(A[j]);
+            if (checkSecret == 4) result++;
         }
+        System.out.println(result);
+        br.close();
     }
 
     private static void Add(char c) {
@@ -69,6 +74,31 @@ public class backJoon12891 {
             case 'T' : {
                 myArr[3]++;
                 if(myArr[3] == checkArr[3]) checkSecret++;
+                break;
+            }
+        }
+    }
+
+    private static void Remove(char c) {
+        switch(c) {
+            case 'A' : {
+                if(myArr[0] == checkArr[0]) checkSecret--;
+                myArr[0]--;
+                break;
+            }
+            case 'C' : {
+                if(myArr[1] == checkArr[1]) checkSecret--;
+                myArr[1]--;
+                break;
+            }
+            case 'G' : {
+                if(myArr[2] == checkArr[2]) checkSecret--;
+                myArr[2]--;
+                break;
+            }
+            case 'T' : {
+                if(myArr[3] == checkArr[3]) checkSecret--;
+                myArr[3]--;
                 break;
             }
         }
