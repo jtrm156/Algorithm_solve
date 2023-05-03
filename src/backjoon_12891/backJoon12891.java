@@ -82,22 +82,22 @@ public class backJoon12891 {
     private static void Remove(char c) {
         switch(c) {
             case 'A' : {
-                if(myArr[0] == checkArr[0]) checkSecret--;
+                if(myArr[0] == checkArr[0]) checkSecret--; // 현재 딱맞는 상태라면 빼야한다
                 myArr[0]--;
                 break;
             }
             case 'C' : {
-                if(myArr[1] == checkArr[1]) checkSecret--;
+                if(myArr[1] == checkArr[1]) checkSecret--; // 현재 딱맞는 상태라면 빼야한다
                 myArr[1]--;
                 break;
             }
             case 'G' : {
-                if(myArr[2] == checkArr[2]) checkSecret--;
+                if(myArr[2] == checkArr[2]) checkSecret--; // 현재 딱맞는 상태라면 빼야한다
                 myArr[2]--;
                 break;
             }
             case 'T' : {
-                if(myArr[3] == checkArr[3]) checkSecret--;
+                if(myArr[3] == checkArr[3]) checkSecret--; // 현재 딱맞는 상태라면 빼야한다
                 myArr[3]--;
                 break;
             }
