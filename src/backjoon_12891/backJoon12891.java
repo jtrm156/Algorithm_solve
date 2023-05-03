@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-
 public class backJoon12891 {
     static int myArr[];
     static int checkArr[];
@@ -19,10 +18,10 @@ public class backJoon12891 {
         int n = Integer.parseInt(st.nextToken());
         int p = Integer.parseInt(st.nextToken());
         int result = 0;
-        checkArr = new int[4];
+        checkArr = new int[4]; //체크배열
         myArr = new int[4]; //현재상태
         char A[] = new char[n];
-        checkSecret = 0;
+        checkSecret = 0; // 현재 네개중에 몇개가 조건을 만족하는가? (A,C,G,T 중에서)
 
         A = br.readLine().toCharArray();
         st = new StringTokenizer(br.readLine());
@@ -36,12 +35,13 @@ public class backJoon12891 {
             }
         }
 
-        for (int i=0; i < p; i++) { //부분문자열 처음 받을때 세팅
+        for (int i=0; i < p; i++) {
+            // 부분문자열 처음 받을때 세팅
             // 현재 상태의 배열에 넣어준다
             Add(A[i]);
         }
 
-        if (checkSecret == 4) result++;
+        if (checkSecret == 4) result++; //부분문자열이 가능한 경우
 
         //슬라이딩윈도우
         for (int i = p; i < n; i++) {
