@@ -5,10 +5,28 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Scanner;
 
 public class backJoon2164 {
     public static void main(String[] args) throws IOException {
-    /*
+        //queue의 선입 선출 이용 데이터 선입 선출이 양쪽에서 일어난다면
+        Scanner sc = new Scanner(System.in);
+        Queue<Integer> queue = new LinkedList<>();
+
+        int n = sc.nextInt();
+
+        for (int i = 1; i <= n; i++) {
+            queue.add(i);
+        }
+
+        while (queue.size()>1) {
+            queue.poll();
+            queue.add(queue.poll());
+        }
+
+        System.out.println(queue.poll());
+
+        /*
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         Queue<Integer> q = new LinkedList<>();
@@ -26,19 +44,21 @@ public class backJoon2164 {
         }
 
         System.out.println(q.poll());	// 마지막으로 남은 원소 출력
-    }
-    */
+        }
+        */
 
+        /*
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int N = Integer.parseInt(br.readLine());
-
+        */
         /**
          *  한 턴에 1개 씩 삭제되고 뒤에 1개가 추가 되므로
          *  2 * N - 1 의 공간이 필요하다.
          *  다만 index는 1부터 시작할 것이기 때문에
          *  2 * N 공간으로 생성한다.
          */
+        /*
         int[] q = new int[2 * N];
         for (int i = 1; i <= N; i++) {
             q[i] = i;
@@ -54,5 +74,6 @@ public class backJoon2164 {
         }
 
         System.out.println(q[prev_index]);
+        */
     }
 }
