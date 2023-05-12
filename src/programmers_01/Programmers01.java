@@ -16,6 +16,8 @@ public class Programmers01 {
         //String[] players = new String[]{"mumu","soe","poe","kai","mine"};
         //String[] callings = new String[]{"kai","kai","mine","mine"};
         //System.out.print(Arrays.toString(solution(players,callings)));
+        /* 프로그래머스 1단계 이상한 문자 만들기 */
+        //String s = "try hello world";
 
         /* 프로그래머스 1단계 카드뭉치 */
         String[] cards1 = new String[]{"i","drink","water"};
@@ -30,10 +32,34 @@ public class Programmers01 {
         String answer = "";
 
 
-
         return answer;
     }
 
+    /* 프로그래머스 1단계 이상한 문자 만들기 */
+    public String solution(String s) {
+        String answer = "";
+        String[] str = s.split("");
+
+        int idx = 0; //인덱스
+
+        for(int i=0; i<str.length; i++) {
+            System.out.println(str[i]);
+
+            if(str[i].equals(" ")) { //띄어쓰기 있다면
+                idx = 0; //인덱스 0 초기화
+            }
+            else if(idx % 2 == 0) { //idx가 짝수면
+                str[i] = str[i].toUpperCase(); //대문자로 변경
+                idx++; //idx 증가
+            }
+            else if(idx % 2 != 0) { //idx가 홀수면
+                str[i] = str[i].toLowerCase(); //소문자로 변경
+                idx++; //idx 증가
+            }
+            answer += str[i];
+        }
+        return answer;
+    }
 
     /* 프로그래머스 1단계 달리기경주 */
     public static String[] solution(String[] players, String[] callings) {
