@@ -1,4 +1,4 @@
-package backjoon_2178;
+package backjoon_2178_BFS;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -21,7 +21,7 @@ public class backJoon2178 {
         n = Integer.parseInt(st.nextToken());
         m = Integer.parseInt(st.nextToken());
 
-        a = new int[n][m];
+        a = new int[n][m]; // 문제에서 주어진 1과0으로 된 map
         visited = new boolean[n][m];
 
         for(int i = 0; i < n; i++) {
@@ -45,7 +45,7 @@ public class backJoon2178 {
 
         while(!queue.isEmpty()) {
             //bfs가 탐색할 수 없을때까지
-            int now[] = queue.poll(); //데이터를 뽑음
+            int now[] = queue.poll(); // 데이터를 뽑음
 
             for (int k = 0; k < 4; k++) {
                //상하좌우 탐색
