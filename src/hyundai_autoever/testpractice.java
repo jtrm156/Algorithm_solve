@@ -23,6 +23,10 @@ public class testpractice {
         int[] b = new int[]{};
         int[][] d = new int[][]{};
 
+        Arrays.sort(b);
+
+        System.out.println(b);
+
         String a = br.readLine();
         String[] c = a.split("-");
 

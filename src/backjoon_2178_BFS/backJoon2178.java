@@ -35,6 +35,7 @@ public class backJoon2178 {
 
         //Bfs시작
         BFS(0,0);
+
         System.out.println(a[n-1][m-1]);
     }
 
