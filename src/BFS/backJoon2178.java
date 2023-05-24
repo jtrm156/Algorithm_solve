@@ -1,4 +1,4 @@
-package backjoon_2178_BFS;
+package BFS;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -46,7 +46,7 @@ public class backJoon2178 {
 
         while(!queue.isEmpty()) {
             //bfs가 탐색할 수 없을때까지
-            int now[] = queue.poll(); // 데이터를 뽑음
+            int[] now = queue.poll(); // 데이터를 뽑음
 
             for (int k = 0; k < 4; k++) {
                //상하좌우 탐색

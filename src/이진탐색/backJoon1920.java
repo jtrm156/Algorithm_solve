@@ -1,4 +1,4 @@
-package backjoon_1920;
+package 이진탐색;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -76,6 +76,8 @@ public class backJoon1920 {
 
         //05.24
         public static void main(String[] args) throws IOException {
+            //O(nlogn)
+
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             StringBuilder sb = new StringBuilder();
 

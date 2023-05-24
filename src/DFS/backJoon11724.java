@@ -1,10 +1,9 @@
-package backjoon_11724_DFS;
+package DFS;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class backJoon11724 {
@@ -17,7 +16,6 @@ public class backJoon11724 {
 
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
-
 
         visited = new boolean[n+1];
         a = new ArrayList[n+1];
