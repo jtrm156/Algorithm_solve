@@ -42,4 +42,13 @@ public class testpractice {
     private static void bfs() {
 
     }
+
+    private static void problem2(int[] a) {
+
+    }
+    private static void problem3(int[] a) {
+        for (int i = 0; i < a.length; i++) {
+
+        }
+    }
 }
